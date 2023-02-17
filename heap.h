@@ -6,7 +6,6 @@
 #include <iostream> 
 #include <algorithm>
 
-using namespace std;
 
 template <typename T, typename PComparator = std::less<T> >
 class Heap

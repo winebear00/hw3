@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <functional>
-#include "llrec.h"
+#include "llrec.cpp"
 using namespace std;
 
 /**
@@ -85,8 +85,30 @@ int main(int argc, char* argv[])
     cout << "Original list: ";
     print(head);
 
-    // Test out your linked list code
 
+    //Test out your linked list code
+    // Node* smaller;
+    // Node* larger; 
+    // llpivot(head, smaller, larger, 8);
+    // print(smaller);
+    // print(larger);
+
+    struct isOdd {
+        bool operator()(int x)
+        {
+            if (x%2!=0)
+            {
+                return true; 
+            }
+            else 
+                return false; 
+        }
+
+    }; 
+
+    isOdd num; 
+    llfilter(head, num);
+    print(head);
 
 
     
